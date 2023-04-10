@@ -17,20 +17,23 @@ namespace EmployeeWageComputation
             //UC1-EmployeeAttendance
             Random random = new Random();
             int employeeAttendance = random.Next(0, 3); //0 to 2
-            if (employeeAttendance == IS_FULL_TIME)
+            switch (employeeAttendance)
             {
-                Console.WriteLine("Employee is Full-time Present");
-                empHrs = 8;
-            }
-            else if (employeeAttendance == IS_PART_TIME)
-            {
-                Console.WriteLine("Employee is Part-time Present");
-                empHrs = 4;
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
-                //empHrs = 0;
+                case IS_FULL_TIME:
+                    //code block
+                    Console.WriteLine("Employee is Full-time Present");
+                    empHrs = 8;
+                    break;
+                case IS_PART_TIME:
+                    //code block
+                    Console.WriteLine("Employee is Part-time Present");
+                    empHrs = 4;
+                    break;
+                default:
+                    //code block
+                    Console.WriteLine("Employee is Absent");
+                    empHrs = 0;
+                    break;
             }
             //UC2
             empWage = EMP_RATE_PER_HR * empHrs;
