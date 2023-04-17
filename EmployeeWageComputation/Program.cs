@@ -50,7 +50,7 @@ namespace EmployeeWageComputation
                 totalHrs += empHrs;
                 totalWage += empWage;
             }
-            //Console.WriteLine("Employee wage is:" +empWage);
+            //Console.WriteLine("Employee wage is:" +empWage)
             Console.WriteLine("Total Wage for {0} days and {1} hrs is:{2} ", (day - 1), totalHrs, totalWage);
             Console.ReadLine();
         }
